@@ -40,3 +40,4 @@ def retrieve(query: str, index, chunks: list, k: int = 3):
     print("🔍 RAG distances:", distances)
     print("🧠 RAG indices:", indices)
     return [chunks[i] for i in indices[0] if i < len(chunks)]
+

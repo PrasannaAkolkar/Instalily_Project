@@ -10,7 +10,7 @@ class InstallAgent(BaseAgent):
 
     def build_prompt(self, message: str, chat_context: str) -> str:
         print("🔍 InstallAgent: Retrieving relevant chunks...")
-        context_chunks = retrieve(message, self.index, self.chunks, k=2)
+        context_chunks = retrieve(message, self.index, self.chunks, k=4)
         context = "\n\n".join(context_chunks)
 
         print("📄 Context chunks added to prompt.")

@@ -9,7 +9,7 @@ class TroubleshootAgent(BaseAgent):
     
     def build_prompt(self, message: str, context: str) -> str:
         print("🔍 TroubleshootAgent: Retrieving relevant chunks...")
-        context_chunks = retrieve(message, self.index, self.chunks, k=2)
+        context_chunks = retrieve(message, self.index, self.chunks, k=3)
         rag_context = "\n\n".join(context_chunks)
 
         print("📄 TroubleshootAgent: Context injected into prompt.")

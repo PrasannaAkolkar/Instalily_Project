@@ -1,28 +1,3 @@
-export const getAIMessage = async (userQuery, history) => {
-  try {
-    const res = await fetch("http://localhost:8000/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: userQuery,
-        history: history,
-      }),
-    });
-
-    const data = await res.json();
-    return {
-      role: "assistant",
-      content: data.response,
-    };
-  } catch (error) {
-    return {
-      role: "assistant",
-      content: "⚠️ Something went wrong contacting the assistant.",
-    };
-  }
-};
 export const getAIMessageStream = async (input, history, onChunk) => {
   const res = await fetch("http://localhost:8000/chat", {
     method: "POST",
@@ -44,3 +19,29 @@ export const getAIMessageStream = async (input, history, onChunk) => {
 
   return { role: "assistant", content };
 };
+
+// export const getAIMessage = async (userQuery, history) => {
+//   try {
+//     const res = await fetch("http://localhost:8000/chat", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         message: userQuery,
+//         history: history,
+//       }),
+//     });
+
+//     const data = await res.json();
+//     return {
+//       role: "assistant",
+//       content: data.response,
+//     };
+//   } catch (error) {
+//     return {
+//       role: "assistant",
+//       content: "⚠️ Something went wrong contacting the assistant.",
+//     };
+//   }
+// };

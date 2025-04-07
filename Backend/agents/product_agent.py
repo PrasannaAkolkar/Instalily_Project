@@ -10,7 +10,7 @@ class ProductAgent(BaseAgent):
         rag_context = ""
         if self.chunks and self.index:
             print("🔍 ProductAgent: Retrieving relevant chunks...")
-            context_chunks = retrieve(message, self.index, self.chunks, k=5)
+            context_chunks = retrieve(message, self.index, self.chunks, k=4)
             rag_context = "\n\n".join(context_chunks)
             print("📄 Top RAG chunks retrieved:", context_chunks)
 

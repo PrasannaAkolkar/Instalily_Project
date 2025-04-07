@@ -9,7 +9,7 @@ class CompatibilityAgent(BaseAgent):
 
     def build_prompt(self, message: str, context: str) -> str:
         print("🔍 CompatibilityAgent: Retrieving relevant chunks...")
-        context_chunks = retrieve(message, self.index, self.chunks, k=2)
+        context_chunks = retrieve(message, self.index, self.chunks, k=4)
         rag_context = "\n\n".join(context_chunks)
 
         print("📄 CompatibilityAgent: Context injected into prompt.")
