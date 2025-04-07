@@ -1,0 +1,34 @@
+[
+    {
+      "username": "pakolkar@usc.edu",
+      "orders": [
+        {
+          "part_number": "PS11752778",
+          "status": "Shipped",
+          "expected_delivery": "2025-04-10",
+          "carrier": "UPS",
+          "tracking_url": "https://tracking.example.com/PS11752778"
+        },
+        {
+          "part_number": "PS120690",
+          "status": "Out for Delivery",
+          "expected_delivery": "2025-04-07",
+          "carrier": "FedEx",
+          "tracking_url": "https://tracking.example.com/PS120690"
+        }
+      ]
+    },
+    {
+      "username": "hello@instalily.ai",
+      "orders": [
+        {
+          "part_number": "PS12345678",
+          "status": "Delivered",
+          "expected_delivery": "2025-04-03",
+          "carrier": "USPS",
+          "tracking_url": "https://tracking.example.com/PS12345678"
+        }
+      ]
+    }
+  ]
+  
